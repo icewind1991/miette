@@ -46,9 +46,9 @@ impl GraphicalReportHandler {
         }
     }
 
-    /// Disables error code linkification using [Diagnostic::url].
-    pub fn without_code_linking(mut self) -> Self {
-        self.linkify_code = false;
+    /// Whether to enable error code linkification using [Diagnostic::url].
+    pub fn with_links(mut self, links: bool) -> Self {
+        self.linkify_code = links;
         self
     }
 
